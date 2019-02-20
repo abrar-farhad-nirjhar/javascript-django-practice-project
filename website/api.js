@@ -14,6 +14,8 @@ class API{
     }
 
     async delete(id){
+        const url = this.api+id
+        console.log(url)
         const response = await fetch(this.api+id,{
             method:'DELETE',
             headers:{
@@ -21,7 +23,7 @@ class API{
             }
         })
 
-        const resData = await response.json()
+       
 
         return "Data has been deleted"
     }
