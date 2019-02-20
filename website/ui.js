@@ -28,7 +28,7 @@ class UI{
                 <tr>
                     <td>${element.id}</td>
                     <td>${element.task}</td>
-                    <td><button class="ui button" value=${element.id} id=${element.id}>submit</button></td>
+                    <td><button class="ui button primary" value=${element.id} id=${element.id}>Done</button></td>
                 
                 </tr>
             `;
