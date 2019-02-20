@@ -27,4 +27,19 @@ class API{
 
         return "Data has been deleted"
     }
+
+    async post(data){
+        
+        const response = await fetch(this.api,{
+            method:'POST',
+            headers:{
+                'Content-type':'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+
+
+        const resData = await response.json()
+        return resData
+    }
 }

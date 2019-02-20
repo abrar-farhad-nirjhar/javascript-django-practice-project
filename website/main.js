@@ -24,6 +24,23 @@ call.get()
 
 })
 
+document.getElementById('task').addEventListener('click',(e)=>{
+    e.preventDefault()
+    value = document.getElementById('task-text').value
+
+    data = {
+        task:value
+    }
+    call.post(data)
+    .then(data=>{
+        console.log(data)
+        location.reload()
+    })
+    .catch(err=>console.log("There was an error"))
+
+    document.getElementById('task-text').value = ""
+})
+
 
 
 
